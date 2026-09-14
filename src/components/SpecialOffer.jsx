@@ -1,0 +1,2 @@
+import { motion } from 'framer-motion';
+export default function SpecialOffer(){return <section className="offer"><div className="offer-bg"/><div className="container offer-inner"><motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}}><p className="eyebrow">A LITTLE EXTRA JOY</p><h2>WEEKEND <em>SPECIAL.</em></h2><p>Buy 5 pastries and get 1 free.</p><button className="text-link" onClick={()=>document.getElementById('menu')?.scrollIntoView({behavior:'smooth'})}>Order now <span>→</span></button></motion.div></div></section>}

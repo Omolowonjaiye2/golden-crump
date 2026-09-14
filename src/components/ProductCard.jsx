@@ -1,0 +1,3 @@
+import { motion } from 'framer-motion';
+const money = n => `₦${n.toLocaleString('en-NG')}`;
+export default function ProductCard({ product, onAdd }) { return <motion.article className="product-card" layout initial={{opacity:0,y:15}} animate={{opacity:1,y:0}} whileHover={{y:-5}}><div className="product-image"><img src={product.image} alt={product.name}/><span>{product.category}</span></div><div className="product-body"><div><h3>{product.name}</h3><p>{product.description}</p></div><div className="product-bottom"><strong>{money(product.price)}{product.name.includes('Birthday') || product.name.includes('Celebration') ? '+' : ''}</strong><button onClick={() => onAdd(product)} aria-label={`Add ${product.name} to cart`}>+ Add</button></div></div></motion.article>}
